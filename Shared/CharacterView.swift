@@ -7,22 +7,45 @@
 
 import SwiftUI
 
-enum ButtonType {
-    case empty
-    case firstPlayer
-    case secondPlayer
-}
-
 struct CharacterView: View {
     @State var character: Character
     
     var body: some View {
-        Text(character.name)
+        NavigationLink {
+            Text(character.name)
+        } label: {
+            HStack{
+                Image(uiImage: UIImage(urlString: character.image) ?? UIImage())
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .clipShape(Circle())
+                Text(character.name)
+            }
+        }
+
     }
 }
 
-struct RectangleView_Previews: PreviewProvider {
+struct CharacterView_Previews: PreviewProvider {
     static var previews: some View {
-        RectangleView(image: UIImage())
+        CharacterView(
+            character: Character(
+                id: 1,
+                name: "1",
+                status: "1",
+                species: "1",
+                type: "1",
+                gender: "1",
+                image: "1",
+                origin: Origin(
+                    name: "1",
+                    url: "1"
+                ),
+                location: Location(
+                    name: "1",
+                    url: "1"
+                )
+            )
+        )
     }
 }

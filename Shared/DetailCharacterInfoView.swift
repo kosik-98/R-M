@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct DetailCharacterInfoView: View {
+    var body: some View {
+        Text("")
+    }
+}
