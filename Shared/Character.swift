@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Character: Codable, Identifiable {
     let id: Int
@@ -14,9 +15,22 @@ struct Character: Codable, Identifiable {
     let species: String
     let type: String
     let gender: String
-    let image: String
+    let imageURL: String
+    var image: UIImage?
     let origin: Origin
     let location: Location
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case status
+        case species
+        case type
+        case gender
+        case imageURL = "image"
+        case origin
+        case location
+    }
 }
 
 struct Origin: Codable {

@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import AlamofireImage
 
 class RequestManager: ObservableObject {
     static let shared = RequestManager()
@@ -14,6 +15,14 @@ class RequestManager: ObservableObject {
     func getCharacters(completion: @escaping ([Character]?) -> ()) {
         AF.request("https://rickandmortyapi.com/api/character").responseDecodable(of: Results.self) { results in
             completion(results.value?.results)
+        }
+    }
+    
+    func loadImage(url: String, completion: @escaping (UIImage) -> ()) {
+        AF.request(url).responseImage { response in
+            if case .success(let image) = response.result {
+                completion(image)
+            }
         }
     }
 }

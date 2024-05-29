@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40655ADB2C07939B0083D353 /* CharactersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40655ADA2C07939B0083D353 /* CharactersListViewModel.swift */; };
+		40655ADC2C07939B0083D353 /* CharactersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40655ADA2C07939B0083D353 /* CharactersListViewModel.swift */; };
 		4161DB2049CB7E77A554CE21 /* Pods_R_M__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29CD4E56CF4D038E804E27F /* Pods_R_M__macOS_.framework */; };
 		83AC1FF41FF7762E3F3EA830 /* Pods_R_M__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9F813AA9D84A5D8226D317 /* Pods_R_M__iOS_.framework */; };
 		C35314EA292ACB1D005CC6AF /* DetailCharacterInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35314E9292ACB1D005CC6AF /* DetailCharacterInfoView.swift */; };
@@ -15,8 +17,6 @@
 		C3780EA029279A62005EE305 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3780E9E29279A62005EE305 /* RequestManager.swift */; };
 		C384206C2929915600A84D8A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = C384206B2929915600A84D8A /* Character.swift */; };
 		C384206D2929915600A84D8A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = C384206B2929915600A84D8A /* Character.swift */; };
-		C384206F29299DA800A84D8A /* UIImage+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = C384206E29299DA800A84D8A /* UIImage+Download.swift */; };
-		C384207029299DA800A84D8A /* UIImage+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = C384206E29299DA800A84D8A /* UIImage+Download.swift */; };
 		C3B88A782861D2F2003474FD /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B88A772861D2F2003474FD /* CharacterView.swift */; };
 		C3B88A792861D2F2003474FD /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B88A772861D2F2003474FD /* CharacterView.swift */; };
 		C3BBD57A28608E88008BA79E /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBD57928608E88008BA79E /* Tests_iOS.swift */; };
@@ -25,8 +25,8 @@
 		C3BBD58828608E88008BA79E /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBD58728608E88008BA79E /* Tests_macOSLaunchTests.swift */; };
 		C3BBD58928608E88008BA79E /* RMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBD56128608E86008BA79E /* RMApp.swift */; };
 		C3BBD58A28608E88008BA79E /* RMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBD56128608E86008BA79E /* RMApp.swift */; };
-		C3BBD58B28608E88008BA79E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBD56228608E86008BA79E /* ContentView.swift */; };
-		C3BBD58C28608E88008BA79E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBD56228608E86008BA79E /* ContentView.swift */; };
+		C3BBD58B28608E88008BA79E /* CharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBD56228608E86008BA79E /* CharactersListView.swift */; };
+		C3BBD58C28608E88008BA79E /* CharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BBD56228608E86008BA79E /* CharactersListView.swift */; };
 		C3BBD58D28608E88008BA79E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3BBD56328608E88008BA79E /* Assets.xcassets */; };
 		C3BBD58E28608E88008BA79E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3BBD56328608E88008BA79E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -49,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40655ADA2C07939B0083D353 /* CharactersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewModel.swift; sourceTree = "<group>"; };
 		42CD0DEA4F7ABE7EE9569966 /* Pods-R&M (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-R&M (iOS).release.xcconfig"; path = "Target Support Files/Pods-R&M (iOS)/Pods-R&M (iOS).release.xcconfig"; sourceTree = "<group>"; };
 		5868A95EF4DC8BD05C806D32 /* Pods-test (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test (iOS).release.xcconfig"; path = "Target Support Files/Pods-test (iOS)/Pods-test (iOS).release.xcconfig"; sourceTree = "<group>"; };
 		70D491F353C95C0591CE2166 /* Pods-R&M (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-R&M (iOS).debug.xcconfig"; path = "Target Support Files/Pods-R&M (iOS)/Pods-R&M (iOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -60,11 +61,10 @@
 		C35314E9292ACB1D005CC6AF /* DetailCharacterInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharacterInfoView.swift; sourceTree = "<group>"; };
 		C3780E9E29279A62005EE305 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		C384206B2929915600A84D8A /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
-		C384206E29299DA800A84D8A /* UIImage+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Download.swift"; sourceTree = "<group>"; };
 		C3B20DF02926568D0033A5C7 /* R&M--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "R&M--iOS--Info.plist"; sourceTree = "<group>"; };
 		C3B88A772861D2F2003474FD /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
 		C3BBD56128608E86008BA79E /* RMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMApp.swift; sourceTree = "<group>"; };
-		C3BBD56228608E86008BA79E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C3BBD56228608E86008BA79E /* CharactersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListView.swift; sourceTree = "<group>"; };
 		C3BBD56328608E88008BA79E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3BBD56828608E88008BA79E /* jServiceTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jServiceTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3BBD56E28608E88008BA79E /* R&M.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "R&M.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +113,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40655AD92C07923B0083D353 /* CharactersList */ = {
+			isa = PBXGroup;
+			children = (
+				C3BBD56228608E86008BA79E /* CharactersListView.swift */,
+				40655ADA2C07939B0083D353 /* CharactersListViewModel.swift */,
+			);
+			path = CharactersList;
+			sourceTree = "<group>";
+		};
 		5B2E01C9BA56524D3C356C84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,14 +162,13 @@
 		C3BBD56028608E86008BA79E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				40655AD92C07923B0083D353 /* CharactersList */,
 				C3BBD56128608E86008BA79E /* RMApp.swift */,
-				C3BBD56228608E86008BA79E /* ContentView.swift */,
 				C3B88A772861D2F2003474FD /* CharacterView.swift */,
 				C35314E9292ACB1D005CC6AF /* DetailCharacterInfoView.swift */,
 				C3BBD56328608E88008BA79E /* Assets.xcassets */,
 				C3780E9E29279A62005EE305 /* RequestManager.swift */,
 				C384206B2929915600A84D8A /* Character.swift */,
-				C384206E29299DA800A84D8A /* UIImage+Download.swift */,
 				C3BBD57828608E88008BA79E /* Tests iOS */,
 			);
 			path = Shared;
@@ -428,12 +436,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3BBD58B28608E88008BA79E /* ContentView.swift in Sources */,
+				40655ADB2C07939B0083D353 /* CharactersListViewModel.swift in Sources */,
+				C3BBD58B28608E88008BA79E /* CharactersListView.swift in Sources */,
 				C3BBD58928608E88008BA79E /* RMApp.swift in Sources */,
 				C384206C2929915600A84D8A /* Character.swift in Sources */,
 				C3B88A782861D2F2003474FD /* CharacterView.swift in Sources */,
 				C3780E9F29279A62005EE305 /* RequestManager.swift in Sources */,
-				C384206F29299DA800A84D8A /* UIImage+Download.swift in Sources */,
 				C35314EA292ACB1D005CC6AF /* DetailCharacterInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,12 +450,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3BBD58C28608E88008BA79E /* ContentView.swift in Sources */,
+				40655ADC2C07939B0083D353 /* CharactersListViewModel.swift in Sources */,
+				C3BBD58C28608E88008BA79E /* CharactersListView.swift in Sources */,
 				C3BBD58A28608E88008BA79E /* RMApp.swift in Sources */,
 				C384206D2929915600A84D8A /* Character.swift in Sources */,
 				C3B88A792861D2F2003474FD /* CharacterView.swift in Sources */,
 				C3780EA029279A62005EE305 /* RequestManager.swift in Sources */,
-				C384207029299DA800A84D8A /* UIImage+Download.swift in Sources */,
 				C35314EB292ACB1D005CC6AF /* DetailCharacterInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

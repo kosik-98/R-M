@@ -7,6 +7,7 @@ target 'R&M (iOS)' do
 
   # Pods for R&M (iOS)
   pod 'Alamofire'
+  pod 'AlamofireImage'
 
 end
 

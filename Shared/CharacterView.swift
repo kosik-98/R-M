@@ -9,20 +9,31 @@ import SwiftUI
 
 struct CharacterView: View {
     @State var character: Character
+    @State var image = UIImage()
     
     var body: some View {
         NavigationLink {
             Text(character.name)
         } label: {
             HStack{
-                Image(uiImage: UIImage(urlString: character.image) ?? UIImage())
+                Image(uiImage: image)
                     .resizable()
                     .frame(width: 100, height: 100)
                     .clipShape(Circle())
                 Text(character.name)
             }
+        }.onAppear(perform: loadData)
+    }
+    
+    func loadData() {
+        guard let image = character.image else {
+            RequestManager.shared.loadImage(url: character.imageURL) { image in
+                self.image = image
+                character.image = image
+            }
+            return
         }
-
+        self.image = image
     }
 }
 
@@ -35,8 +46,9 @@ struct CharacterView_Previews: PreviewProvider {
                 status: "1",
                 species: "1",
                 type: "1",
-                gender: "1",
-                image: "1",
+                gender: "1", 
+                imageURL: "",
+                image: UIImage(),
                 origin: Origin(
                     name: "1",
                     url: "1"
