@@ -11,7 +11,7 @@ import SwiftUI
 struct RMApp: App {
     var body: some Scene {
         WindowGroup {
-            CharactersListView().environmentObject(RequestManager.shared)
+            MainTabBarView()
         }
     }
 }

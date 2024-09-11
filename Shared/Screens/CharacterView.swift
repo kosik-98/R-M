@@ -27,7 +27,11 @@ struct CharacterView: View {
     
     func loadData() {
         guard let image = character.image else {
-            RequestManager.shared.loadImage(url: character.imageURL) { image in
+//            RequestManager.shared.loadImage(url: character.imageURL) { image in
+//                self.image = image
+//                character.image = image
+//            }
+            APIRequest<EmptyRequest, EmptyResponse>.loadImage(url: character.imageURL) { image in
                 self.image = image
                 character.image = image
             }
@@ -53,7 +57,7 @@ struct CharacterView_Previews: PreviewProvider {
                     name: "1",
                     url: "1"
                 ),
-                location: Location(
+                location: Origin(
                     name: "1",
                     url: "1"
                 )

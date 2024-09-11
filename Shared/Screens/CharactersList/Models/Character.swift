@@ -18,7 +18,7 @@ struct Character: Codable, Identifiable {
     let imageURL: String
     var image: UIImage?
     let origin: Origin
-    let location: Location
+    let location: Origin
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -38,11 +38,6 @@ struct Origin: Codable {
     let url: String
 }
 
-struct Location: Codable {
-    let name: String
-    let url: String
-}
-
-struct Results: Codable {
-    let results: [Character]
+struct Results<Model: Decodable>: Decodable {
+    let results: [Model]
 }

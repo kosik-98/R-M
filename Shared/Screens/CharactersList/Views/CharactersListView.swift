@@ -9,7 +9,7 @@ import SwiftUI
 import Alamofire
 
 struct CharactersListView: View {
-    @StateObject var viewModel = CharactersListViewModel()
+    @ObservedObject var viewModel = CharactersListViewModel()
     
     var body: some View {
         NavigationView {

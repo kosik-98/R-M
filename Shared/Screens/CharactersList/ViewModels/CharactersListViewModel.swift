@@ -19,9 +19,10 @@ class CharactersListViewModel: ObservableObject {
     }
     
     func loadCharacters() {
-        RequestManager.shared.getCharacters { [weak self] characters in
-            guard let characters = characters else { return }
-            self?.characters = characters
+        CharactersRequest().request { response in
+            self.characters = response
+        } failure: { error in
+            print(error)
         }
     }
 }
